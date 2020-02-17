@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
    if (!(pass.isEmpty() )) {
 
-       b2.orderByChild("ticket_no").equalTo(MainActivity.pass).addChildEventListener(new ChildEventListener() {
+       b2.orderByChild("number").equalTo(MainActivity.pass).addChildEventListener(new ChildEventListener() {
            @Override
            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 //                for(DataSnapshot child:dataSnapshot.getChildren()) {
@@ -189,9 +189,9 @@ public class MainActivity extends AppCompatActivity {
                m.setKey(key);
                Log.v("ALI", "family key " + key);
                String location = dataSnapshot.child("location").getValue().toString();
-               String tickeno = dataSnapshot.child("ticket_no").getValue().toString();
+               String tickeno = dataSnapshot.child("number").getValue().toString();
                String details = dataSnapshot.child("details").getValue().toString();
-               String contactperson = dataSnapshot.child("contact_person").getValue().toString();
+               String contactperson = dataSnapshot.child("contact_Person").getValue().toString();
                String address = dataSnapshot.child("address").getValue().toString();
                String mstatus = dataSnapshot.child("status").getValue().toString();
                Log.v("ALI", "status " + mstatus);

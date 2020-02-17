@@ -47,7 +47,7 @@ public  RecyclerView programinglist;
         programinglist.setAdapter(adapter);
         b1= FirebaseDatabase.getInstance().getReference();
         b2=b1.child("tasks");
-        b2.orderByChild("email").equalTo(MainActivity.email).addChildEventListener(new ChildEventListener() {
+        b2.orderByChild("userEmail").equalTo(MainActivity.email).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 //                for(DataSnapshot child:dataSnapshot.getChildren()) {
@@ -59,12 +59,12 @@ public  RecyclerView programinglist;
                 m.setKey(key);
                 Log.v("ALI", "family key " +key);
                 String location = dataSnapshot.child("location").getValue().toString();
-                String tickeno = dataSnapshot.child("ticket_no").getValue().toString();
+                String tickeno = dataSnapshot.child("number").getValue().toString();
                 String details = dataSnapshot.child("details").getValue().toString();
 //                String status = dataSnapshot.child("status").getValue().toString();
 //                Log.v("ALI", "family value " +status);
 //                m.setAddress(status);
-                String contactperson = dataSnapshot.child("contact_person").getValue().toString();
+                String contactperson = dataSnapshot.child("contact_Person").getValue().toString();
                 String address = dataSnapshot.child("address").getValue().toString();
                 String rstatus = dataSnapshot.child("status").getValue().toString();
                 Log.v("ALI rec", "status rec " +rstatus);
@@ -114,7 +114,7 @@ public  RecyclerView programinglist;
     {
         b1= FirebaseDatabase.getInstance().getReference();
         b2=b1.child("tasks");
-        b2.orderByChild("email").equalTo(MainActivity.email).addChildEventListener(new ChildEventListener() {
+        b2.orderByChild("userEmail").equalTo(MainActivity.email).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 //                for(DataSnapshot child:dataSnapshot.getChildren()) {
@@ -122,7 +122,7 @@ public  RecyclerView programinglist;
                 model m = new model();
 //                    model    m1 = dataSnapshot.getValue(model.class);
                 String location = dataSnapshot.child("location").getValue().toString();
-                String tickeno = dataSnapshot.child("ticket_no").getValue().toString();
+                String tickeno = dataSnapshot.child("number").getValue().toString();
                 Log.v("ALI", "family value " +location);
                 Log.v("ALI", "family value " + tickeno);
                 m.setLocation(location);

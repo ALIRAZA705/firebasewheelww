@@ -348,9 +348,9 @@ public static  FragmentTransaction ft;
                     }
                     database = FirebaseDatabase.getInstance();
                     myRef = database.getReference();
-                    a1 = myRef.child("tasks").child(key).child("start travel longITUDE");
+                    a1 = myRef.child("tasks").child(key).child("geo1_long");
                     a1.setValue(longitude);
-                    a2 = myRef.child("tasks").child(key).child("start travel  lattitude");
+                    a2 = myRef.child("tasks").child(key).child("geo1_lat");
                     a2.setValue(lattitude);
                     String name = "starttravel";
 
@@ -390,9 +390,9 @@ public static  FragmentTransaction ft;
                     }
                     database = FirebaseDatabase.getInstance();
                     myRef = database.getReference();
-                    a8 = myRef.child("tasks").child(key).child("end travel longITUDE");
+                    a8 = myRef.child("tasks").child(key).child("geo2_long");
                     a8.setValue(longitude);
-                    a10 = myRef.child("tasks").child(key).child(" end travel lattitude");
+                    a10 = myRef.child("tasks").child(key).child(" geo2_lat");
                     a10.setValue(lattitude);
                     boolb1=0;
                     starttravel.setVisibility(v.INVISIBLE);
@@ -434,9 +434,9 @@ public static  FragmentTransaction ft;
                     database = FirebaseDatabase.getInstance();
                     myRef = database.getReference();
 
-                    a11 = myRef.child("tasks").child(key).child("start task longITUDE");
+                    a11 = myRef.child("tasks").child(key).child("geo3_long");
                     a11.setValue(longitude);
-                    a12 = myRef.child("tasks").child(key).child(" start task lattitude");
+                    a12 = myRef.child("tasks").child(key).child(" geo3_lat");
                     a12.setValue(lattitude);
 
 
@@ -564,9 +564,9 @@ public static  FragmentTransaction ft;
 
                     database = FirebaseDatabase.getInstance();
                     myRef = database.getReference();
-                    a13 = myRef.child("tasks").child(key).child("end task longITUDE");
+                    a13 = myRef.child("tasks").child(key).child("geo4_long");
                     a13.setValue(longitude);
-                    a14 = myRef.child("tasks").child(key).child(" end task lattitude");
+                    a14 = myRef.child("tasks").child(key).child(" geo4_lat");
                     a14.setValue(lattitude);
 
 
